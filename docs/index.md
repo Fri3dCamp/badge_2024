@@ -2,12 +2,12 @@
 
 So you got a cool badge, what can you do with it? ;-)
 
-![badge image place holder](badge2024.jpg)
-
 ## Play with it
 
-The default firmware has some built-in features we will describe here. There are also expansion boards like the blaster, the communicator, the mini-blaster (AKA noisy cricket)
-![Fri3d Mini Blaster Illustration not representative](noisycricket.jpg)
+You don't need to be a programming wizard to have fun with this badge!
+Go to the [Onboarding](Onboarding) pages to see all the cool features we built into the standard firmware.
+
+![badge image place holder](badge2024.jpg)
 
 ## Program it
 
