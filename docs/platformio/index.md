@@ -73,19 +73,21 @@ If you just want to try all examples:
 2. Click "Fork"
 3. You now have the same repository, but in your own profile
 4. Click the green button `<> Code`
-5. copy the URL you see in the pop-up
+5. Copy the URL you see in the pop-up
 6. Open the Git Bash CLI where you want to create the forked repository
 7. Type `git clone ` and paste the URL from the Github repository
 
 So far, the instructions are exactly the same as for downloading the examples
 
 8. In github click on `main` to create a new branch
-9. in the search bar, type a name of your choice, e.g. `newexample`
-10. click `create branch newexample` from main
+9. In the search bar, type a name of your choice, e.g. `newexample`
+10. Click `create branch newexample` from main
 11. Open the Git Bash CLI in the root folder of your repository
 12. `git checkout -b newexample`
-13. add your example
+13. Add your example
 14. `git add .`
 15. `git commit -m "I created a new example"`
 16. `git push`
-17. in GitHub, click `create new merge request`
+17. in GitHub, click `compare and pull request`
+18. Add a nice description,
+19. Click `Create pull request`
