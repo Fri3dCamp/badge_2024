@@ -2,7 +2,6 @@
 
 So you got a cool badge, what can you do with it? ;-)
 
-
 ## Play with it
 
 You don't need to be a programming wizard to have fun with this badge!
