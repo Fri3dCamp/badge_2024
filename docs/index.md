@@ -17,6 +17,7 @@ Congratulations! If you want to squash some bugs, you're going to need some tool
 
 - You can use **C++** in the [Arduino editor](arduino), or [Visual Studio Code](platformio)
 - If you prefer [Python](micropython), you can use any plain text editor, but Visual Studio Code works too.
+- If you are into homeassistant and want to connect your badge using [esphome](esphome). You can either use the command line or esphome dashboard.
 - If typing code is not your thing, you can drag blocks in [bipes](bipes)
 
 ## Revert to Firmware
