@@ -30,21 +30,26 @@ There are 2 holes for positive and 2 holes for negative, choose best fitting one
 
 7. Ready to solder the LED  
 Mind the **polarity**: long leg is positive, short leg is negative, flat side on the body is negative
-![alt text](20240418_213045.jpg)
+![ready to solder LED](20240418_213045.jpg)
 
 8. LED soldered  
 Mind the **polarity**: positive (long leg) on the bottom, negative on top (short leg, flat side on the body)
-![alt text](20240418_213317.jpg)
+![LED soldered](20240418_213317.jpg)
 
 9. Overview pictures of soldered Noisy Cricket
-![alt text](20240418_213331.jpg)
-![alt text](20240418_213347.jpg)
-![alt text](20240418_213358.jpg)
-![alt text](20240418_213431.jpg)
-![alt text](20240418_213448.jpg)
-![alt text](20240418_213500.jpg)
-![alt text](20240418_213509.jpg)
+![soldered 1](20240418_213331.jpg)
+![soldered 2](20240418_213347.jpg)
+![soldered 3](20240418_213358.jpg)
+![soldered 4](20240418_213431.jpg)
+![soldered 5](20240418_213448.jpg)
+![soldered 6](20240418_213500.jpg)
+![soldered 7](20240418_213509.jpg)
 
 10. Noisy Cricket mounted on the fri3d2024 badge
-![alt text](20240418_213828.jpg)
-![alt text](20240418_213843.jpg)
+Mounted with the pin header soldered on the bottom
+![mounted 1](20240418_213828.jpg)
+![mounted 2](20240418_213843.jpg)
+
+Mounted with the pin header soldered on the back
+![mounted 3](DSC_5355.JPG)
+![mounted 4](DSC_5358.JPG)
