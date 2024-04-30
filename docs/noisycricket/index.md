@@ -2,27 +2,31 @@
 
 ## Assembly photos
 1. All components neatly packaged
-![alt text](20240418_210751.jpg)
+![components packaged](20240418_210751.jpg)
 
 2. Spread out in order of soldering
-![alt text](20240418_211002.jpg)
+![components spread out](20240418_211002.jpg)
 
 3. Component side of the pcb is where the fri3d logo is  
 - 33 Ohm (blue body and orange,orange.black colored bands) resistor on top  
 - 120 Ohm (beige body and black,red,black colored bands) risistor on bottom  
 2 resistors soldered
-![alt text](20240418_212359.jpg)
+![resistors soldered](20240418_212359.jpg)
 
 4. NPN transistor 2N3904 with flat side to the left (back of noisy cricket)
-![alt text](20240418_212550.jpg)
+![transistor soldered](20240418_212550.jpg)
 
 5. Electrolytic capacitor (33 microFarad)  
 Mind the **polarity**: long leg is positive, short leg is negative, white marking on the body is negative  
 There are 2 holes for positive and 2 holes for negative, choose best fitting ones
-![alt text](20240418_212741.jpg)
+![capacitor soldered](20240418_212741.jpg)
 
-6. Pin header soldered on the bottom
-![alt text](20240418_213031.jpg)
+6. Pin header soldered on the bottom  
+2 orientations are possible:
+- on the bottom: this results in an upright position when mounted on the fri3d2024 badge
+- at the back: this results in a front facing position when mounted on the fri3d2024 badge
+![pin header soldered bottom](20240418_213031.jpg)
+![pin header alternate orientation](pin_header_alternate_orientation.png)
 
 7. Ready to solder the LED  
 Mind the **polarity**: long leg is positive, short leg is negative, flat side on the body is negative
