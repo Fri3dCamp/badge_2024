@@ -11,15 +11,17 @@ https://fri3d-flasher.vercel.app/#/
 ## How to run a local file
 Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
 
-`pip install mpremote`
+TLDR; `pip install mpremote`
 
-```
+```sh
 mpremote resume run local_test_file.py
 ```
 Unfortunately `Thonny` interrupts the startup of the badge when connecting, leaving some items (spi, display) in an undefined state.  
 The same for `mpremote` if not supplied with the `resume` argument.
 
 ## how to copy a file to the badge
-```
+```sh
 mpremote resume fs cp local_path/file.jpg :file.jpg
 ```
+
+The badge has [lvgl](lvgl) built-in.
