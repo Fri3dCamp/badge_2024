@@ -39,7 +39,7 @@ lv.screen_load(scr)
 ```
 
 ### wifi-config screen
-```
+```python
 
 # Initialize
 
