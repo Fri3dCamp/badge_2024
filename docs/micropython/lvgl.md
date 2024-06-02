@@ -172,6 +172,7 @@ w.load()
 ```
 
 ### canvas
+red border around a golden background
 ```python
 # Initialize
 import display_driver
@@ -179,13 +180,34 @@ import lvgl as lv
 disp = lv.display_get_default()
 disp.set_resolution(296,240)
 
-scr = lv.obj()
+scr = lv.screen_active()
 
-buf = lv.draw_buf_create(50,50,lv.COLOR_FORMAT.RGB565, lv.STRIDE_AUTO)
+buf = lv.draw_buf_create(scr.get_width(),scr.get_height(),lv.COLOR_FORMAT.RGB565, lv.STRIDE_AUTO)
 canvas = lv.canvas(scr)
 canvas.set_draw_buf(buf)
-canvas.fill_bg(lv.color_hex(0xF1C40F), lv.OPA.COVER)
 canvas.center()
 
-lv.screen_load(scr)
+layer = lv.layer_t()
+canvas.init_layer(layer)
+
+dsc = lv.draw_rect_dsc_t()
+dsc.bg_color = lv.color_hex(0xffbf00)
+dsc.bg_opa = lv.OPA.COVER
+
+dsc.border_color = lv.palette_main(lv.PALETTE.RED)
+dsc.border_width = 2
+dsc.border_side = lv.BORDER_SIDE.TOP | lv.BORDER_SIDE.LEFT | lv.BORDER_SIDE.RIGHT | lv.BORDER_SIDE.BOTTOM
+dsc.border_opa = lv.OPA.COVER
+
+dsc.radius = 61
+
+a = lv.area_t()
+a.x1 = 0
+a.y1 = 0
+a.x2 = 295
+a.y2 = 239
+
+lv.draw_rect(layer, dsc, a)
+
+canvas.finish_layer(layer)
 ```
