@@ -182,7 +182,7 @@ disp.set_resolution(296,240)
 scr = lv.obj()
 
 buf = lv.draw_buf_create(50,50,lv.COLOR_FORMAT.RGB565, lv.STRIDE_AUTO)
-canvas = lv.canvas(src)
+canvas = lv.canvas(scr)
 canvas.set_draw_buf(buf)
 canvas.fill_bg(lv.color_hex(0xF1C40F), lv.OPA.COVER)
 canvas.center()
