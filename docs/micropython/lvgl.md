@@ -251,3 +251,27 @@ lv.draw_rect(layer, dsc, a)
 
 canvas.finish_layer(layer)
 ```
+
+
+## real examples
+
+### load png image
+```python
+# load fri3d_logo-min.png
+png = open('fri3d_logo-min.png', 'rb')
+data = png.read()
+png.close()
+
+img = lv.image(lv.screen_active())
+
+imgd = lv.image_dsc_t()
+imgd.header.cf = lv.COLOR_FORMAT.ARGB8888
+imgd.header.w = 240
+imgd.header.h = 240
+imgd.data = data
+imgd.data_size = len(data)
+
+img.set_src(imgd)
+
+img.align(lv.ALIGN.CENTER, 0, 0)
+```
