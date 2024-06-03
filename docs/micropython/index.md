@@ -2,8 +2,8 @@
 
 ## Flash the default fri3d micropython firmware
 download firmware from
-https://github.com/cheops/fri3d-ota/tree/main/ota/fri3d_badge_2024
-select the version and then the *.zip file in that folder
+https://github.com/cheops/fri3d-ota/tree/main/ota/fri3d_badge_2024  
+select the version and then the `*.zip` file in that folder
 
 flasher app 
 https://fri3d-flasher.vercel.app/#/
