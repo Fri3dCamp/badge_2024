@@ -51,3 +51,4 @@ Other interesting links
 - https://hackaday.com/2021/05/25/simple-micropython-game-is-a-30-minute-game-dev-course/
 - pinball [link1](https://github.com/russhughes/s3lcd/blob/main/examples/pinball.py) or [link2](https://github.com/russhughes/st7789_mpy/blob/master/examples/pinball.py)
 - [gameESP](https://github.com/cheungbx/gameESP-micropython)
+- [snake](https://github.com/cheops/badge_2024_micropython/blob/s3lcd/fri3d/modules/demos/snake.py)
