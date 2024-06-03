@@ -32,4 +32,22 @@ The same for `mpremote` if not supplied with the `resume` argument.
 mpremote resume fs cp local_path/file.jpg :file.jpg
 ```
 
+## Micropython libraries
+Micropython [quick reference for the esp32](https://docs.micropython.org/en/v1.22.0/esp32/quickref.html)
+
+Micropython standard libraries overview [doc](https://docs.micropython.org/en/v1.22.0/library/index.html)
+
 The badge has [lvgl](lvgl) built-in.
+
+Buttons demo [demo_buttons.py](https://github.com/cheops/badge_2024_micropython/blob/lv_indev/fri3d/modules/demos/demo_buttons.py)
+
+Joystick demo [demo_joystick.py](https://github.com/cheops/badge_2024_micropython/blob/lv_indev/fri3d/modules/demos/demo_joystick.py)
+
+Other interesting links
+- https://github.com/peterhinch/micropython-samples
+- https://github.com/mcauser/awesome-micropython
+
+## micropython game ideas
+- https://hackaday.com/2021/05/25/simple-micropython-game-is-a-30-minute-game-dev-course/
+- pinball [link1](https://github.com/russhughes/s3lcd/blob/main/examples/pinball.py) or [link2](https://github.com/russhughes/st7789_mpy/blob/master/examples/pinball.py)
+- [gameESP](https://github.com/cheungbx/gameESP-micropython)
