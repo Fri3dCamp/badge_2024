@@ -8,7 +8,7 @@ select the version and then the `*.zip` file in that folder
 flasher app 
 https://fri3d-flasher.vercel.app/#/
 
-You might need to put the badge in DOWNLOAD mode manually:
+If your download fails, you might have more success if you put the badge in DOWNLOAD mode manually:
 - PRESS + HOLD the START button
 - PRESS the RESET button (while HOLDING the START button)
 - the badge has now restarted in download mode
