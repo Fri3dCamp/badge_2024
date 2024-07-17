@@ -20,7 +20,7 @@ Congratulations! If you want to squash some bugs, you're going to need some tool
 - If you are into homeassistant and want to connect your badge using [esphome](esphome). You can either use the command line or esphome dashboard.
 - If typing code is not your thing, you can drag blocks in [bipes](bipes)
 
-## Revert to Firmware
+## Revert to Default Firmware
 
 After your adventures in programming yielded unexpected results, you might want to go back to the default firmware.
 Look around for a "badge reset firmware" booth on the Fri3d camp. We sort of anticipated this ... :-)
@@ -31,7 +31,7 @@ Look around for a "badge reset firmware" booth on the Fri3d camp. We sort of ant
 If you want to perform the reset yourself:
 
 1. if your badge seems to reset every few seconds. You can force every ESP32-based board as follows:
-    11. press and hold "boot" button
+    11. press and hold "start" button (this is the "boot" button of the microcontroller)
     12. press and release "reset" button
     13. your badge will now be ready to be flashed with a new program
 2. install ESP-IDF <https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation>
