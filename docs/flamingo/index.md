@@ -1,14 +1,17 @@
 # Big Flamingo Gun 9000
 
 ## Step by step assembly photos
-1. All components neatly packaged
+
+### All components neatly packaged
 ***insert images***
 
-2. Spread out in order of soldering
+### Spread out in order of soldering
 
-3. Start with the lowest components 
+### Start with the lowest components 
 
-999. Mount the connector on your badge
+### INSERT MORE STEPS
+
+### Mount the connector on your badge
 
 ## Notes
 Firmware updates can be flashed through the badge flash station in the solder area.
