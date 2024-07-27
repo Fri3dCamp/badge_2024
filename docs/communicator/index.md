@@ -10,7 +10,7 @@ The communicator is built around :
 - [Analog Devices MAX98357A](https://www.analog.com/en/products/max98357a.html) DAC with amplifier
 - small speaker.
 
-You can also use the keyboard as an USB keyboardm however **do not plug in the USB cable when it's connected to the badge**!
+You can also use the keyboard as an USB keyboard, however **do not plug in the USB cable when it's connected to the badge**!
 
 You can get the design files and sources in the [GitHub repository](https://github.com/Fri3dCamp/communicator_2024)
 
