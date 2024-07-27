@@ -14,6 +14,8 @@ You can also use the keyboard as an USB keyboard, however **do not plug in the U
 
 You can get the design files and sources in the [GitHub repository](https://github.com/Fri3dCamp/communicator_2024)
 
+![blockdiagram](blockdiagram.png)
+
 ## Step by step assembly guide
 
 ### All components neatly packaged
