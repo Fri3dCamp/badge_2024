@@ -1,6 +1,7 @@
 site_name: Fri3d 2024
 site_url: https://fri3dcamp.github.io/badge_2024/
 docs_dir: docs
+
 theme:
   name: material
   logo: assets/logo_white.svg
@@ -32,6 +33,10 @@ theme:
     - search.highlight
     - search.share
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.indexes
 
 plugins:
   - search
