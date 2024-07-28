@@ -31,6 +31,7 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - navigation.instant
 
 plugins:
   - search
