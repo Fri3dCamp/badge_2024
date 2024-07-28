@@ -3,6 +3,7 @@
 This page contains reference code for each badge component. It currently assumes you have [esphome](https://esphome.io/guides/getting_started_command_line) installed and are familiar adding a device.
 
 ## Common code
+
 ```
 substitutions:
   esphome_name: fri3d2024
@@ -17,6 +18,7 @@ esp32:
 ```
 
 ## Display
+
 ```
 spi:
   clk_pin: GPIO7
@@ -53,10 +55,13 @@ image:
     id: my_image
     type: RGB24
 ```
-*TODO*
+
+_TODO_
+
 - refresh log error
 
 ## Status light
+
 ```
 light:
   - platform: status_led
@@ -66,6 +71,7 @@ light:
 ```
 
 ## RGB leds
+
 ```
 light:
   - platform: neopixelbus
@@ -77,6 +83,7 @@ light:
 ```
 
 ## Buttons
+
 ```
 binary_sensor:
   - platform: gpio
@@ -130,35 +137,43 @@ binary_sensor:
 ```
 
 ## Joystick
+
 ```
 sensor:
   - platform: adc
-    id: joystick_x  
-    name: "Joystick X axis"  
+    id: joystick_x
+    name: "Joystick X axis"
     pin: GPIO01
     internal: True
     attenuation: auto
     update_interval: 500ms
 
   - platform: adc
-    id: joystick_y  
-    name: "Joystick Y axis"  
+    id: joystick_y
+    name: "Joystick Y axis"
     pin: GPIO03
     internal: True
     attenuation: 11db
     update_interval: 500ms
 ```
-*TODO*
+
+_TODO_
+
 - disable logging
 - on_xxx: left/right & up/down
 
 ## Buzzer
+
 ```
+
 ```
-*TODO*
+
+_TODO_
+
 - test
 
 ## Accelerometer
+
 ```
 i2c:
   sda: GPIO9
@@ -166,10 +181,13 @@ i2c:
   scan: true
   id: bus_i2c
 ```
-*TODO*
+
+_TODO_
+
 - contribute code & test
 
 ## IR Receiver
+
 ```
 remote_receiver:
   pin:
@@ -180,24 +198,37 @@ remote_receiver:
       pullup: true
   dump: all
 ```
-*TODO*
+
+_TODO_
+
 - test
 
 ## Battery monitor
+
 ```
+
 ```
-*TODO*
+
+_TODO_
+
 - test
 
 ## AUX power
+
 ```
+
 ```
-*TODO*
+
+_TODO_
+
 - test
 
 ## SD Card
-```
-```
-*TODO*
-- define use case
 
+```
+
+```
+
+_TODO_
+
+- define use case

@@ -32,3 +32,11 @@ theme:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+        - locale: nl
+          name: Nederlands
