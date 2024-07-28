@@ -34,7 +34,7 @@ The package you received contains everything you need to build your own communic
 
 ### Mount the speaker
 
-Remove the protective layer and glue the speaker on the PCB. Solder the 2 wire on the pads, the red wire should go the the pad marked with a + symbol.
+Remove the protective layer and glue the speaker on the PCB. Solder the 2 wire on the pads, the red wire should go the the pad marked with a `+` symbol.
 
 ![speaker soldered](speaker.jpg)
 ![speaker back view](speaker2.jpg)
@@ -56,7 +56,7 @@ Snap in the 2mm spacers in the pink cover. place the silicone keyboard in the PC
 
 ### Mount the communicator
 
-Snap in the 16mm long spacers in the 4 holes, mount it on the back of the badge in place of the pretective backplate.
+Snap in the 16mm long spacers in the 4 holes, mount it on the back of the badge in place of the protective backplate.
 
 ![16mm spacers mounted](16mm_spacer.jpg)
 ![Communicator mounted](communicator_mounted.jpg)
