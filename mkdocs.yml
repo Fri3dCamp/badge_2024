@@ -3,7 +3,7 @@ site_url: https://fri3dcamp.github.io/badge_2024/
 docs_dir: docs
 theme:
   name: material
-  logo: logo_white.svg
+  logo: assets/logo_white.svg
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
