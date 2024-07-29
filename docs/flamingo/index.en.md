@@ -14,7 +14,7 @@ The flamingo blaster is built around basic components:
 
 ## Step by step assembly guide
 
-![package contents](òverview.jpg)
+![package contents](overview.jpg)
 
 ### All components neatly packaged
 The package you received has everything you need to build your own flamingo blaster.
@@ -83,6 +83,16 @@ Use the large and single pin header to solder the [LANA TNY](https://phyx.be/LAN
 ![LANA Module](LANA.jpg)
 
 ![LANA pins](LANA_pins.jpg)
+
+### Condesators
+The large blue condesator, just as the IR LED, has a long lead indicating the anode of this part. This longer lead should go in the hole marked with the `+` pin.
+
+The smaller yellow condensators can be mounted either way.
+
+![Large capacitor mounted](capacitor.jpg)
+
+![100nF capacitors mounted](100n.jpg)
+
 
 ### Badge link connector
 Last part is the badge link connector. This 3.5mm audio jack is soldered on the same side as all the other components
