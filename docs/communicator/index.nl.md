@@ -4,7 +4,7 @@
 
 The communicator bestaat uit:
 
-- QWERTY toetsenbord met achtegrond verlichting ontworpen door [Solder Party](https://www.solder.party/)
+- QWERTY toetsenbord met achtergrond verlichting ontworpen door [Solder Party](https://www.solder.party/)
 - op RISC-V gebaseerd microcontroller module [LANA TNY](https://phyx.be/LANA_TNY/)
 - [TDK ICS43434](https://invensense.tdk.com/products/ics-43434/) microfoon
 - [Analog Devices MAX98357A](https://www.analog.com/en/products/max98357a.html) DAC met versterker
@@ -20,7 +20,7 @@ De ontwerp- en bronbestanden kan je terugvinden in de [GitHub repository](https:
 
 ### Alle componenten netjes verpakt
 
-Het pakje dat je ontvangen hebt beval alles wat je nodig hebt om de communicator add-on te bouwen
+Het pakje dat je ontvangen hebt bevat alles wat je nodig hebt om de communicator add-on te bouwen
 
 - Communicator printplaat
 - Roze afdekplaat
