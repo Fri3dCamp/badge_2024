@@ -1,7 +1,7 @@
 # Sweet 4x4
 
 ## Features
-The sweet 4x4 macropad is at its 3rd iteration. This you'll use a [LANA TNY](https://phyx.be/LANA_TNY/) (or any other [XIAO / QtPy compatible board](https://github.com/adafruit/awesome-qt-py)) at the heart of this macropad. 
+The sweet 4x4 macropad is at its 3rd iteration. This tiume you'll use a [LANA TNY](https://phyx.be/LANA_TNY/) (or any other [XIAO / QtPy compatible board](https://github.com/adafruit/awesome-qt-py)) at the heart of this macropad. 
 You can opt for 16 keys or 15 keys and a rotary encoder.
 
 ![finished macropad](backlit.gif)
@@ -60,8 +60,10 @@ If you like a rotary encoder, place one in the upper left corner of the key matr
 ![endocer mounted](encoder.jpg)
 
 ### Switches
-<INSERT IMAGE WITH THE PLEXI PLATE>
-Screws? Spacers? 
+`INSERT IMAGE WITH THE PLEXI PLATE`
+
+### Casing
+Screws? Spacers? Plexi?
 
 ### Keycaps
 Snap on the keycaps of your choice.
@@ -78,4 +80,4 @@ Not all keyboards come with n-key rollover, as implementing the feature comes wi
 To enable n-key rollover on this macropad, break off the 2 top corners to break the short circuit and use the diodes.
 
 ## Firmware
-<INSERT INFO>
+`INSERT INFO`
