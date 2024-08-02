@@ -8,8 +8,6 @@ You can opt for 16 keys or 15 keys and a rotary encoder.
 
 ## Step by step assembly guide
 
-![package contents](overview.jpg)
-
 ### Overview
 The package you received has everything you need to build your own Sweet 4x4.
 
