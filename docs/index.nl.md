@@ -22,22 +22,7 @@ Om te programmeren (en bugs te vermijden) heb je de juiste tools nodig...
 
 ## Reset Default Firmware
 
-ALs je helemaal in de knoop zit en je geraakt er niet uit, wil je misschien terug naar de default firmware.
-Op het kamp zullen we een standje voorzien waar je je badge kan resetten. Je ziet; we hebben aan alles gedacht! :-)
-
-![Rest to Firmware Neuralizer](neuralizer.jpg)
-
-Hier is hoe je thuis zelf kan resetten:
-
-1. Als je badge om de paar seconden spontaan reset, kan je ze als volgt "forceren" om te luisteren naar een nieuwe upload:
-    11. Klik en houd de "start" knop (Op ESP32 heet dit de "boot button")
-    12. Klik en laat los de "reset" knop
-    13. Je badge staat nu in "download" mode tot je opnieuw reset duwt
-2. installeer ESP-IDF <https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation>
-3. Download de meest recente firmware op <https://github.com/Fri3dCamp/badge_2024_micropython>
-4. in de command line interface, type:
-
-        python -m esptool -p (PORT) -b 460800 --before default_reset --after no_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 bootloader.bin 0x8000 partition-table.bin 0x1d000 ota_data_initial.bin 0x30000 micropython.bin
+Zie [Hoe resetten](reset)
 
 ## Documentation
 
