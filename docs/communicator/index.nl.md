@@ -66,12 +66,12 @@ Duw de 16mm lange plastieken pinnetjes in de 4 gaten die overeenkomen met de bad
 Het toetsenbord doet zich voor als een HID input toestel.
 met de `Fn` toets kan je speciale functies activeren:
 
-- `Fn+Rood`: Maak de LED op LANA rood
-- `Fn+Oranje`: Maak de LED op LANA oranje
+- `Fn+Rood Vierkant`: Maak de LED op LANA rood
+- `Fn+Oranje Driehoek`: Maak de LED op LANA oranje
 - `Fn+Geel Fri3d logo`: Maak de LED op LANA geel
-- `Fn+Groen`: Maak de LED op LANA groen
-- `Fn+Blauw`: Maak de LED op LANA blauw
-- `Fn+Paars`: Maak de LED op LANA paars
+- `Fn+Groene Cirkel`: Maak de LED op LANA groen
+- `Fn+Blauwe Klaverblad`: Maak de LED op LANA blauw
+- `Fn+Paarse Ruit`: Maak de LED op LANA paars
 - `Fn+Solder Party`: Zet de LED op LANA uit
 - `Fn+Backspace`: Delete
 - `Fn+Omhoog`: Page Up

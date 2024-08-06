@@ -66,12 +66,12 @@ Snap in the 16mm long spacers in the 4 holes, mount it on the back of the badge 
 The keyboard presents itself as a HID input device.
 The `Fn` key can be used to trigger special functions:
 
-- `Fn+Red`: Put LANA LED to red
-- `Fn+Orange`: Put LANA LED to orange
+- `Fn+Red Square`: Put LANA LED to red
+- `Fn+Orange Triangle`: Put LANA LED to orange
 - `Fn+Yellow Fri3d logo`: Put LANA LED to yellow
-- `Fn+Green`: Put LANA LED to green
-- `Fn+Blue`: Put LANA LED to blue
-- `Fn+Purple`: Put LANA LED to purple
+- `Fn+Green Circle`: Put LANA LED to green
+- `Fn+Blue Three-Leaf-Clover`: Put LANA LED to blue
+- `Fn+Purple Rhombus`: Put LANA LED to purple
 - `Fn+Solder Party`: Put LANA LED off
 - `Fn+Backspace`: Delete
 - `Fn+Up`: Page Up
