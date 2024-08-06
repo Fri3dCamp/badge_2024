@@ -72,7 +72,7 @@ met de `Fn` toets kan je speciale functies activeren:
 - `Fn+F4`: Maak de LED op LANA groen
 - `Fn+F5`: Maak de LED op LANA blauw
 - `Fn+F6`: Maak de LED op LANA paars
-- `Fn+Windows`: Wet de LED op LANA uit
+- `Fn+Solder Party`: Zet de LED op LANA uit
 - `Fn+Backspace`: Delete
 - `Fn+Omhoog`: Page Up
 - `Fn+Omlaag`: Page Down

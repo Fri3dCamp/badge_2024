@@ -72,7 +72,7 @@ The `Fn` key can be used to trigger special functions:
 - `Fn+F4`: Put LANA LED to green
 - `Fn+F5`: Put LANA LED to blue
 - `Fn+F6`: Put LANA LED to purple
-- `Fn+Windows`: Put LANA LED off
+- `Fn+Solder Party`: Put LANA LED off
 - `Fn+Backspace`: Delete
 - `Fn+Up`: Page Up
 - `Fn+Down`: Page Down
