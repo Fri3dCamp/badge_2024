@@ -44,7 +44,7 @@ Er is geen verkeerde volgorde om de onderdelen te solderen, maar we raden aan om
 ### Weerstanden
 Het pakket bevat een grotere 33R weerstand en een kleinere 1k weerstand.
 
-![weerstanden gemonteerd](weerstanden.jpg)
+![weerstanden gemonteerd](resistors.jpg)
 
 ### Teamschakelaar en luidspreker
 De volgende componenten met een laag profiel zijn de zoemer en de teamschakelaar. Monteer de schakelaar met de actuator weg van de PCB gericht.
