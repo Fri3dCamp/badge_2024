@@ -110,6 +110,10 @@ Nu hoeft u alleen nog maar de badge-linkconnector aan uw badge toe te voegen. Mo
 
 ![badge link connector gesoldeerd](badge_link3.jpg)
 
+Let op dat er geen kortsluiting is tussen de voorste pin en de decoratie van de badge!
+
+![badge link connector nakijken](badge_link4.jpg)
+
 ## Opmerkingen
 
 Firmware-updates kunnen worden geflasht via het badge-flashstation in het soldeergebied.

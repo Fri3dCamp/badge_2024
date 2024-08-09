@@ -112,6 +112,9 @@ Now all that is left to do is adding the badge link connector to your badge. Mou
 
 ![badge link connector soldered](badge_link3.jpg)
 
+Make sure there is no short circuit between de single pin and the decorative design on the badge!
+
+![badge link connector check](badge_link4.jpg)
 
 ## Notes
 
