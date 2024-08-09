@@ -1,0 +1,6 @@
+Om de blaster (flamingo) te programmeren kan je mounriver IDE of embeetle gebruiken. De eerste is een ide op basis van eclipse gereleased door de chipmaker WCH. Deze werkt op windows en er is een versie voor linux en ik dacht mac maar de laatste 2 lopen wat achter. Mounriver geeft op veel systemen ook valse meldingen van virussen en schend de gpl licentie voorwaardes van eclips.
+Een mooier alternatief is embeetle <https://embeetle.com/> dit is een IDE van Belgische makelij. Deze is niet open source maar produceert wel een open toolchain bij het maken van een nieuw project.
+Lana kan je met embeetle programmeren via de usb connector maar ook met de wchlink modulle, deze geeft extra debugging opties.
+De makers van embeetle zijn ook zo lief geweest om het LANA bordje en heel knappe documentatie toe te voegen. <https://embeetle.com/#supported-hardware/wch/boards/lana-tny-01> .
+Als je zelf aan de slag gaat met de blaster/LANA TNY dan moet je 1 ding letten (onafhankelijk van de ide) dat is dat LANA geen externe klok heeft en de interne klok (HSI) moet gebruiken, dit staat ook zo in de default sketch van embeetle.
+Als je per ongeluk je LANA bordje "bricked" kan je die meestal unbricken via usb of door de power reset feature te gebruiken van de wchisptool.
