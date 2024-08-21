@@ -1,36 +1,55 @@
 # MicroPython documentatie
 
-**NOG VERTALEN**
+## Start micropython
+1. Update je badge naar de laatste versie. [instructies](/reset)
+1. Als het flashen klaar is, druk dan RESET zodat het hoofd menu verschijnt (met de groene knoppen: Ota, Hello, Micropython, Retro-go)
+1. Maak een verbinding met [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)  
+   Dit zal een Timeout Error geven (omdat de Micropython REPL nog niet actief is, dit is OK)
+1. Nu kan je vanonder op het scherm (in Fri3d Viper IDE) de seriele logging van de badge zien
+1. Selecteer nu op de badge Micropython en druk op A
+1. De badge start nu opnieuw op en je kan de seriele logging van het boot process volgen. Onderbreek dit process niet!! Micropython is files aan het extracten op de fat partitie.
+1. Na een poos zie je de REPL promt verschijnen `>>> `
+1. Je kan nu in de Fri3d Viper IDE de verbinding verbreken en opnieuw connecteren [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)
 
 
-## Flash the default fri3d micropython firmware
-download firmware from
-https://github.com/cheops/fri3d-ota/tree/main/ota/fri3d_badge_2024  
-select the version and then the `*.zip` file in that folder
+Standaard gaat de badge niet opnieuw Micropython opstarten na een reset.
+Als je dit toch wil, moet je het booten in Micropython nog bevestigen.
+Je kan dit doen als volgt:
 
-flasher app 
-https://fri3d-flasher.vercel.app/#/
+```
+    from fri3d import boot
+    boot.persist()
+```
+Nu geraak je niet langer meer in het main menu.
+Om hierin terug te kunnen booten moet je dit doen:
+```
+    from fri3d import boot
+    boot.main_menu()
+```
 
-If your download fails, you might have more success if you put the badge in DOWNLOAD mode manually:
-- PRESS + HOLD the START button
-- PRESS the RESET button (while HOLDING the START button)
-- the badge has now restarted in download mode
+## Badge Examples
+Er is voorbeeld code geinstalleerd op de badge zelf. [sources](https://github.com/Fri3dCamp/badge_2024_micropython/tree/develop/fri3d/fri3d_application/src/payload/examples)
 
-after the download you might need to reset the badge to boot normally (PRESS the RESET button)
+Je kan deze bekijken en runnen met [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)
 
+Als je error krijgt van onbestaande modules bij de eerste 4 voorbeelden, dan is waarschijnlijk het extractie process bij de eerste opstart van Micropython onderbroken.
+De eenvoudigste manier om dit op te lossen is om de stappen hierboven te volgen.
 
-## How to run a local file
-Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
+## Een locale file uitvoeren
+Installeer `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
 
 TLDR; `pip install mpremote`
 
 ```sh
-mpremote resume run local_test_file.py
+mpremote run local_test_file.py
 ```
-Unfortunately `Thonny` interrupts the startup of the badge when connecting, leaving some items (spi, display) in an undefined state.  
-The same for `mpremote` if not supplied with the `resume` argument.
 
-## how to copy a file to the badge
+[Thonny](https://thonny.org/) werkt ook prima.
+
+Helaas werkt de cleanup van de Display module niet helemaal correct, nadat die geinitialiseerd is, en je volgende script probeert dit opnieuw, zal dit fouten geven.
+Je moet een reset uitvoeren (RESET button op de badge)
+
+## Een file kopieren naar de badge
 ```sh
 mpremote resume fs cp local_path/file.jpg :file.jpg
 ```
@@ -41,10 +60,6 @@ Micropython [quick reference for the esp32](https://docs.micropython.org/en/v1.2
 Micropython standard libraries overview [doc](https://docs.micropython.org/en/v1.22.0/library/index.html)
 
 The badge has [lvgl](lvgl) built-in.
-
-Buttons demo [demo_buttons.py](https://github.com/cheops/badge_2024_micropython/blob/lv_indev/fri3d/modules/demos/demo_buttons.py)
-
-Joystick demo [demo_joystick.py](https://github.com/cheops/badge_2024_micropython/blob/lv_indev/fri3d/modules/demos/demo_joystick.py)
 
 Other interesting links
 - https://github.com/peterhinch/micropython-samples
