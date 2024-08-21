@@ -4,11 +4,6 @@
 
 After your adventures in programming yielded unexpected results, you might want to go back to the default firmware.
 
-## Fri3d Camp Reset Booth
-
-During the Fri3d Camp, at the "Badge EHBO", we can help you!
-Look around for a "badge reset firmware" booth on the Fri3d camp. We sort of anticipated this ... :-)
-
 ## Web interface
 
 The online flasher app works with chrome based browsers (Chrome, Edge) (not Firefox, Safari).
@@ -38,4 +33,10 @@ This is the complicated version. Only worth it if the web flasher failed.
 4. on your command line interface type:
 
         python -m esptool -p (PORT) -b 460800 --before default_reset --after no_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 full_firmware_fox.img
+
+## Fri3d Camp Reset Booth
+
+Fri3d Camp is over, wait for the next one.  
+During the Fri3d Camp, at the "Badge EHBO", we can help you!  
+Look around for a "badge reset firmware" booth on the Fri3d camp. We sort of anticipated this ... :-)
 
