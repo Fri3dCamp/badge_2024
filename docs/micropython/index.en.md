@@ -1,8 +1,16 @@
 # MicroPython documentation
 
 ## Start micropython
-Ensure your badge is upgraded to the latest version.
-Boot the badge in de main menu and choose 'MicroPython'. The badge reboots and you get a black screen (the dark magic is inside).
+1. Ensure your badge is upgraded to the latest version. [instructions](reset)
+1. After flashing has finished, press reset so that the main menu appears (with green buttons: Ota, Hello, Micropython, Retro-go)
+1. Connect with [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)
+   This will give a timeout error (because the micropython REPL does not answer, this is OK)
+1. Now you can see on the bottom of the screen the serial logging of the badge
+1. On the badge select micropython en press A
+1. The badge reboots and you will see the serial output of the boot process. Do not interrupt this process!! Micropython is extracting the files to the fat partition.
+1. After a while you will see a REPL promt `>>> `
+1. You can now disconnect and reconnect the [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)
+
 
 By default, the badge will not reboot into MicroPython on reset.
 Should you want this, you need to confirm the switch to MicroPython was successful.
@@ -20,25 +28,10 @@ To switch back you need to do this:
 ```
 
 ## Badge Examples
-There are examples installed on the badge itself.
+There are examples installed on the badge itself. [sources](https://github.com/Fri3dCamp/badge_2024_micropython/tree/develop/fri3d/fri3d_application/src/payload/examples)
 
 You can explore these with [ViperIDE](https://fri3dcamp.github.io/viper/)
-
-## Flash the default fri3d micropython firmware
-download firmware from
-https://github.com/cheops/fri3d-ota/tree/main/ota/fri3d_badge_2024  
-select the version and then the `*.zip` file in that folder
-
-flasher app 
-https://fri3d-flasher.vercel.app/#/
-
-If your download fails, you might have more success if you put the badge in DOWNLOAD mode manually:
-- PRESS + HOLD the START button
-- PRESS the RESET button (while HOLDING the START button)
-- the badge has now restarted in download mode
-
-after the download you might need to reset the badge to boot normally (PRESS the RESET button)
-
+If the some of the first 4 examples fail to run, this is likely because the first micropython boot was interrupted. The easiest way to fix this is to follow the steps above.
 
 ## How to run a local file
 Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
@@ -46,10 +39,11 @@ Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpre
 TLDR; `pip install mpremote`
 
 ```sh
-mpremote resume run local_test_file.py
+mpremote run local_test_file.py
 ```
-Unfortunately `Thonny` interrupts the startup of the badge when connecting, leaving some items (spi, display) in an undefined state.  
-The same for `mpremote` if not supplied with the `resume` argument.
+
+Unfortunately the cleanup of the Display module does not work entirely, so after this has been initialized and your next script tries to initialize it again, this will give errors.
+You need to perform a hard reset (reset button on the badge)
 
 ## how to copy a file to the badge
 ```sh
@@ -62,10 +56,6 @@ Micropython [quick reference for the esp32](https://docs.micropython.org/en/v1.2
 Micropython standard libraries overview [doc](https://docs.micropython.org/en/v1.22.0/library/index.html)
 
 The badge has [lvgl](lvgl) built-in.
-
-Buttons demo [demo_buttons.py](https://github.com/cheops/badge_2024_micropython/blob/lv_indev/fri3d/modules/demos/demo_buttons.py)
-
-Joystick demo [demo_joystick.py](https://github.com/cheops/badge_2024_micropython/blob/lv_indev/fri3d/modules/demos/demo_joystick.py)
 
 Other interesting links
 - https://github.com/peterhinch/micropython-samples
