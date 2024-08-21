@@ -2,19 +2,19 @@
 badge_2024_micropython is built with LVLG v9.1 included
 
 ## links
-- lvgl homepage https://lvgl.io/
-- lvgl documentation https://docs.lvgl.io/9.1/
+- lvgl homepage <https://lvgl.io/>
+- lvgl documentation <https://docs.lvgl.io/9.1/>
 
 ### python examples (v8.4)
 Unfortunately for v9.x the python examples are not available any more  
-This are the main differences between v8.x and v9.x https://docs.lvgl.io/9.0/CHANGELOG.html and more specific https://docs.lvgl.io/9.0/CHANGELOG.html#general-api-changes
-- lvgl live python examples (v8.4) https://docs.lvgl.io/8.4/examples.html
-- lvgl python examples source code (v8.4) (search for *.py files) https://github.com/lvgl/lvgl/tree/v8.4.0/examples
+This are the main differences between v8.x and v9.x [Changelog](https://docs.lvgl.io/9.0/CHANGELOG.html) and more specific [api-changes](https://docs.lvgl.io/9.0/CHANGELOG.html#general-api-changes)
+- lvgl live python examples (v8.4) <https://docs.lvgl.io/8.4/examples.html>
+- lvgl python examples source code (v8.4) (search for *.py files) <https://github.com/lvgl/lvgl/tree/v8.4.0/examples>
 
 ## online simulator
 There is an online micropython + lvgl (v9.0) simulator available  
-https://sim.lvgl.io/v9.0/micropython/ports/webassembly/index.html  
-This is very convenient to prototype new screens
+<https://sim.lvgl.io/v9.0/micropython/ports/webassembly/index.html>  
+This is **very convenient** to prototype new screens
 
 
 ## Simulator Examples
