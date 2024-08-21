@@ -30,8 +30,9 @@ To switch back you need to do this:
 ## Badge Examples
 There are examples installed on the badge itself. [sources](https://github.com/Fri3dCamp/badge_2024_micropython/tree/develop/fri3d/fri3d_application/src/payload/examples)
 
-You can explore these with [ViperIDE](https://fri3dcamp.github.io/viper/)  
-If the some of the first 4 examples fail to run, this is likely because the first micropython boot was interrupted. The easiest way to fix this is to follow the steps above.
+You can explore these with [ViperIDE](https://fri3dcamp.github.io/viper/)
+
+If some of the first 4 examples fail to run, this is likely because the first micropython boot was interrupted. The easiest way to fix this is to follow the steps above.
 
 ## How to run a local file
 Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
