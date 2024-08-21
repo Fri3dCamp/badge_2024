@@ -26,7 +26,7 @@ Als het flashen mislukt omdat je badge elke zoveel seconden reset, kan je ze als
 
 Je badge start nu in de default Fri3d App.
 
-## ESP-IDF
+## esptool
 
 Dit is de ingewikkelde versie en is het enkel waard als de web flasher niet werkt.
 
@@ -34,9 +34,9 @@ Dit is de ingewikkelde versie en is het enkel waard als de web flasher niet werk
     11. Klik en houd de "start" knop in (Op ESP32 heet dit de "boot button")
     12. Klik en laat de "reset" knop los
     13. Je badge staat nu in "download" mode tot je opnieuw reset duwt
-2. installeer ESP-IDF <https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation>
-3. Download de meest recente firmware op <https://github.com/Fri3dCamp/badge_2024_micropython>
-4. in de command line interface, type:
+2. installeer esptool <https://docs.espressif.com/projects/esptool/en/latest/esp32/>
+3. Download de meest recente firmware op <https://github.com/Fri3dCamp/badge_firmware/releases/latest> `full_firmware_fox.img`
+5. in de command line interface, type:
 
-        python -m esptool -p (PORT) -b 460800 --before default_reset --after no_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 bootloader.bin 0x8000 partition-table.bin 0x1d000 ota_data_initial.bin 0x30000 micropython.bin
+        python -m esptool -p (PORT) -b 460800 --before default_reset --after no_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 full_firmware_fox.img
 
