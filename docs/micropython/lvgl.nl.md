@@ -44,7 +44,7 @@ label.set_text('Hello World!')
 lv.screen_load(scr)
 ```
 
-### knop in een klasse met callback, onthouden van de status
+### knop in een class met callback, onthouden van de status
 
 ```python
 
