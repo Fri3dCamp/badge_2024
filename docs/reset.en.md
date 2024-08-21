@@ -25,7 +25,7 @@ If the flashing fails because your badge keeps resetting, you can force every ES
     
 Now the device should boot into the Fri3d App.
 
-## ESP-IDF
+## esptool
 
 This is the complicated version. Only worth it if the web flasher failed.
 
@@ -33,9 +33,9 @@ This is the complicated version. Only worth it if the web flasher failed.
     11. press and hold "start" button (this is the "boot" button of the microcontroller)
     12. press and release "reset" button
     13. your badge will now be ready to be flashed with a new program
-2. install ESP-IDF <https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation>
-3. download the latest firmware from <https://github.com/Fri3dCamp/badge_2024_micropython>
+2. install esptool <https://docs.espressif.com/projects/esptool/en/latest/esp32/>
+3. download the latest firmware from <https://github.com/Fri3dCamp/badge_firmware/releases/latest> `full_firmware_fox.img`
 4. on your command line interface type:
 
-        python -m esptool -p (PORT) -b 460800 --before default_reset --after no_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 bootloader.bin 0x8000 partition-table.bin 0x1d000 ota_data_initial.bin 0x30000 micropython.bin
+        python -m esptool -p (PORT) -b 460800 --before default_reset --after no_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 full_firmware_fox.img
 
