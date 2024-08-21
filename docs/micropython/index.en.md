@@ -1,7 +1,7 @@
 # MicroPython documentation
 
 ## Start micropython
-1. Ensure your badge is upgraded to the latest version. [instructions](/reset)
+1. Ensure your badge is upgraded to the latest version. [instructions](../reset)
 1. After flashing has finished, press reset so that the main menu appears (with green buttons: Ota, Hello, Micropython, Retro-go)
 1. Connect with [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)
    This will give a timeout error (because the micropython REPL does not answer, this is OK)
