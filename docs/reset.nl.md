@@ -37,6 +37,6 @@ Dit is de ingewikkelde versie en is het enkel waard als de web flasher niet werk
 
 ## Fri3d Camp Reset Booth
 
-Fri3d Camp is voorbij, wat tot de volgende keer.  
+Fri3d Camp is voorbij, wacht tot de volgende keer.  
 Tijdens Fri3d Camp, bij de "Badge EHBO" helpen we jou met plezier terug op weg!  
 Zoek naar de "badge reset firmware" booth op het kamp. We hebben alles voorzien :-)
