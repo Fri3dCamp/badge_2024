@@ -9,8 +9,9 @@ badge_2024_micropython is gebouwd met LVLG v9.1 ingebakken.
 
 ### python voorbeelden (v8.4)
 
-Spijtig genoeg zijn de python voorbeelden niet meer beschikbaar voor v9.x
-Dit zijn de belangrijkste verschillen tussen v8.x en v9.x [Changelog](https://docs.lvgl.io/9.0/CHANGELOG.html) en meer specifiek [api-changes](https://docs.lvgl.io/9.0/CHANGELOG.html#general-api-changes)
+Spijtig genoeg zijn de python voorbeelden niet meer beschikbaar voor v9.x  
+Dit zijn de belangrijkste verschillen tussen v8.x en v9.x [Changelog](https://docs.lvgl.io/9.0/CHANGELOG.html)  
+en meer specifiek [api-changes](https://docs.lvgl.io/9.0/CHANGELOG.html#general-api-changes)
 
 - lvgl interactieve python voorbeelden (v8.4) [https://docs.lvgl.io/8.4/examples.html]
 - lvgl python voorbeelden broncode (v8.4) (zoek voor \*.py files) [https://github.com/lvgl/lvgl/tree/v8.4.0/examples]
@@ -18,7 +19,7 @@ Dit zijn de belangrijkste verschillen tussen v8.x en v9.x [Changelog](https://do
 ## Online simulator
 
 Er is een online Micropython + lvgl (v9.0) simulator beschikbaar  
-[https://sim.lvgl.io/v9.0/micropython/ports/webassembly/index.html]
+[https://sim.lvgl.io/v9.0/micropython/ports/webassembly/index.html]  
 Dit is **zeer handig** om prototypes van nieuwe schermen te maken.
 
 ## Simulator Examples
