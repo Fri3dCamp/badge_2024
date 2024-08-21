@@ -4,11 +4,6 @@
 
 Als je programmeer-avonturen bizarre resultaten hebben opgeleverd, kan het zijn dat je wil teruggaan naar de originele software...
 
-## Fri3d Camp Reset Booth
-
-Tijdens Fri3d Camp, bij de "Badge EHBO" helpen we jou met plezier terug op weg!
-Zoek naar de "badge reset firmware" booth op het kamp. We hebben alles voorzien :-)
-
 ## Web interface
 
 De online flasher app werkt enkel met browsers gebaseerd op chrome(Chrome of Edge, niet Firefox of Safari).
@@ -40,3 +35,8 @@ Dit is de ingewikkelde versie en is het enkel waard als de web flasher niet werk
 
         python -m esptool -p (PORT) -b 460800 --before default_reset --after no_reset --chip esp32s3 write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 full_firmware_fox.img
 
+## Fri3d Camp Reset Booth
+
+Fri3d Camp is voorbij, wat tot de volgende keer.  
+Tijdens Fri3d Camp, bij de "Badge EHBO" helpen we jou met plezier terug op weg!  
+Zoek naar de "badge reset firmware" booth op het kamp. We hebben alles voorzien :-)
