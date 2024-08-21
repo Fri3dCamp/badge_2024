@@ -16,15 +16,15 @@ By default, the badge will not reboot into MicroPython on reset.
 Should you want this, you need to confirm the switch to MicroPython was successful.
 You can do this like this:
 
-```
-    from fri3d import boot
-    boot.persist()
+```python
+from fri3d import boot
+boot.persist()
 ```
 Note that now you no longer can get back to the main menu.
 To switch back you need to do this:
-```
-    from fri3d import boot
-    boot.main_menu()
+```python
+from fri3d import boot
+boot.main_menu()
 ```
 
 ## Badge Examples
@@ -51,6 +51,14 @@ You need to perform a hard reset (reset button on the badge)
 ## how to copy a file to the badge
 ```sh
 mpremote resume fs cp local_path/file.jpg :file.jpg
+```
+
+## Start the Fri3d application
+```python
+from fri3d.application import Application
+
+app_main = Application()
+app_main.run()
 ```
 
 ## Micropython libraries
