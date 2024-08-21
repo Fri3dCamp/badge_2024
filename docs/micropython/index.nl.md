@@ -16,15 +16,15 @@ Standaard gaat de badge niet opnieuw Micropython opstarten na een reset.
 Als je dit toch wil, moet je het booten in Micropython nog bevestigen.
 Je kan dit doen als volgt:
 
-```
-    from fri3d import boot
-    boot.persist()
+```python
+from fri3d import boot
+boot.persist()
 ```
 Nu geraak je niet langer meer in het main menu.
 Om hierin terug te kunnen booten moet je dit doen:
-```
-    from fri3d import boot
-    boot.main_menu()
+```python
+from fri3d import boot
+boot.main_menu()
 ```
 
 ## Badge Examples
@@ -35,7 +35,7 @@ Je kan deze bekijken en runnen met [Fri3d ViperIDE](https://fri3dcamp.github.io/
 Als je error krijgt van onbestaande modules bij de eerste 4 voorbeelden, dan is waarschijnlijk het extractie process bij de eerste opstart van Micropython onderbroken.
 De eenvoudigste manier om dit op te lossen is om de stappen hierboven te volgen.
 
-## Een locale file uitvoeren
+## Een lokale file uitvoeren
 Installeer `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
 
 TLDR; `pip install mpremote`
@@ -52,6 +52,14 @@ Je moet een reset uitvoeren (RESET button op de badge)
 ## Een file kopieren naar de badge
 ```sh
 mpremote resume fs cp local_path/file.jpg :file.jpg
+```
+
+## De Fri3d applicatie starten
+```python
+from fri3d.application import Application
+
+app_main = Application()
+app_main.run()
 ```
 
 ## Micropython libraries
