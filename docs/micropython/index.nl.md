@@ -1,7 +1,7 @@
 # MicroPython documentatie
 
 ## Start micropython
-1. Update je badge naar de laatste versie. [instructies](/reset)
+1. Update je badge naar de laatste versie. [instructies](../reset)
 1. Als het flashen klaar is, druk dan RESET zodat het hoofd menu verschijnt (met de groene knoppen: Ota, Hello, Micropython, Retro-go)
 1. Maak een verbinding met [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)  
    Dit zal een Timeout Error geven (omdat de Micropython REPL nog niet actief is, dit is OK)
