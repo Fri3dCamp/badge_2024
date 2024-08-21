@@ -43,6 +43,8 @@ TLDR; `pip install mpremote`
 mpremote run local_test_file.py
 ```
 
+Thonny also works fine.
+
 Unfortunately the cleanup of the Display module does not work entirely, so after this has been initialized and your next script tries to initialize it again, this will give errors.
 You need to perform a hard reset (reset button on the badge)
 
