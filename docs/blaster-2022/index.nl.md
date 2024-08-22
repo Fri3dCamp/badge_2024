@@ -33,6 +33,7 @@ Wat je in deze screenshot ziet is feitelijk een Arduino UNO project dat geconver
 
 &nbsp;<br>
 ## STEP 3: Plug in je bordje
+Belangrijk: je badge mag niet aangesloten zijn aan de blaster (5V van de USB maakt je 3,3V badge stuk)  
 Plug je `blaster-2022` bordje in.
 
 &nbsp;<br>
