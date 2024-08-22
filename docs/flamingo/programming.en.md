@@ -32,6 +32,7 @@ Now click `CREATE` at the bottom. Embeetle IDE will download the sample project 
 
 &nbsp;<br>
 ## STEP 3: Plug in the board
+Important: your badge must be disconnected from the `blaster` (flamingo) (5V from the USB will distroy your 3,3V badge)  
 FIRST press the `BOOT` switch, THEN plug your board into the computer with a USB-C cable (while keeping the `BOOT` switch pressed):
 
 <img src="https://github.com/user-attachments/assets/da84c6b6-a243-4aa3-ab76-96eced937d2a" width="200">
