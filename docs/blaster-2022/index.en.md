@@ -33,6 +33,7 @@ What you see in this screenshot is basically an Arduino UNO project that has bee
 
 &nbsp;<br>
 ## STEP 3: Plug in the board
+Important: your badge must be disconnected from the blaster (5V from the USB will distroy your 3,3V badge)  
 Plug in your `blaster-2022` device.
 
 &nbsp;<br>
