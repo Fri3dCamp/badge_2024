@@ -32,6 +32,7 @@ Klik onderaan op `CREATE`. Embeetle IDE zal het project en ook alle benodigde to
 
 &nbsp;<br>
 ## STAP 3: Plug het bordje in
+Belangrijk: je badge mag niet aangesloten zijn aan de communicator (5V van de USB maakt je 3,3V badge stuk)
 DRUK EERST op de `BOOT`-knop en SLUIT DAN je bordje aan op de computer met een USB-C-kabel (terwijl je de `BOOT`-knop ingedrukt houdt):
 
 <img src="https://github.com/user-attachments/assets/da84c6b6-a243-4aa3-ab76-96eced937d2a" width="200">
