@@ -37,12 +37,9 @@ now let's put this into action in an improved version of `main.py`
 # Similarly, if you delete the fri3d or user package it will also get restored to its original state
 
 import logging
-import time
 
 from fri3d.badge.buttons import buttons
-from fri3d.badge.leds import leds
 from fri3d import boot
-from fri3d.rtttl import songs, RTTTL
 
 # If you want you can increase the log output level here
 logging.basicConfig(level=logging.INFO, force=True)
@@ -62,48 +59,6 @@ logger.info("From now on you can press the MENU button to reboot to the main men
 
 # stay in micropython, now that we have a button to go back to the main menu
 boot.persist()
-
-# play a song to recognise that we have booted micropython
-RTTTL(songs.macarena_s).play(volume=50)
-
-# a function to flash the leds
-def flash_leds():
-    logger.debug("Flashing LEDs")
-
-    # cycle
-    for i in range(4 * leds.n):
-        leds.fill((0, 0, 0))
-        leds[i % leds.n] = (255, 255, 255)
-        leds.write()
-        time.sleep_ms(25)
-
-    # bounce
-    for i in range(4 * leds.n):
-        leds.fill((0, 0, 128))
-        if (i // leds.n) % 2 == 0:
-            leds[i % leds.n] = (0, 0, 0)
-        else:
-            leds[leds.n - 1 - (i % leds.n)] = (0, 0, 0)
-        leds.write()
-        time.sleep_ms(60)
-
-    # fade in/out
-    for i in range(0, 4 * 256, 8):
-        for j in range(leds.n):
-            if (i // 256) % 2 == 0:
-                val = i & 0xff
-            else:
-                val = 255 - (i & 0xff)
-            leds[j] = (val, 0, 0)
-        leds.write()
-        time.sleep(0)
-
-    # clear
-    leds.fill((0, 0, 0))
-    leds.write()
-
-# call our function to flash the leds
-flash_leds()
 ```
 
 ## Badge Examples
