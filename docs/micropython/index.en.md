@@ -34,6 +34,31 @@ You can explore these with [ViperIDE](https://fri3dcamp.github.io/viper/)
 
 If some of the first 4 examples fail to run, this is likely because the first micropython boot was interrupted. The easiest way to fix this is to follow the steps above [Start micropython](#start-micropython).
 
+## How to create and run a new file on your badge in Fri3d ViperIDE
+Example to create a file `user/marco/first.py` on your badge and run it
+1. Connect to your badge with [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)
+1. on the left side in the files scroll down to the `user`folder
+1. click on the `+`-sign next to the `user` folder
+1. to create a folder end it with a `/`, so for our example fill in `marco/`
+1. now click on the `+`-sign next to the `marco` folder
+1. create a file `first.py`
+1. in the file editor type
+```python
+print("Shout: Marco!")
+print("...")
+print("Answer: Polo!")
+```
+1. to run this example click on the blue play button (F5)
+1. observe the output of this example on the bottom in the Terminal of ViperIDE
+```
+>>> 
+Shout: Marco!
+...
+Answer: Polo!
+>
+>>> 
+```
+
 ## How to run a local file
 Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
 
