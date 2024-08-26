@@ -60,6 +60,7 @@ Answer: Polo!
 ```
 
 ## How to reboot to the main menu when pressing the MENU button
+run this script once in your active session and a press of the MENU button will bring you back to the main badge menu
 ```python
 from fri3d.badge.buttons import buttons
 from fri3d import boot
