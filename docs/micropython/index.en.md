@@ -97,14 +97,12 @@ import time
 from fri3d.badge.leds import leds
 
 for _ in range(10):
-   for i in range(leds.n):
-      leds[i] = (255, 0, 0)
+   leds.fill((255, 0, 0))
    leds.write()
 
    time.sleep(0.5)
 
-   for i in range(leds.n):
-      leds[i] = (0, 0, 0)
+   leds.fill((0, 0, 0))
    leds.write()
 
    time.sleep(0.5)
