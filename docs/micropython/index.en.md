@@ -11,20 +11,99 @@
 1. After a while you will see a REPL promt `>>> `
 1. You can now disconnect and reconnect the [Fri3d ViperIDE](https://fri3dcamp.github.io/viper/)
 
-
-By default, the badge will not reboot into MicroPython on reset.
-Should you want this, you need to confirm the switch to MicroPython was successful.
+## improved `main.py`
+By default, the badge will **not** reboot into MicroPython on reset.  
+Should you want this, you need to confirm the switch to MicroPython was successful.  
 You can do this like this:
 
 ```python
 from fri3d import boot
 boot.persist()
 ```
-Note that now you no longer can get back to the main menu.
-To switch back you need to do this:
+Note that now you no longer can get back to the main menu.  
+To switch back you need to do this:  
 ```python
 from fri3d import boot
 boot.main_menu()
+```
+
+now let's put this into action in an improved version of `main.py`
+```python
+# Hello and welcome to the code of the Fri3d Badge!
+# You have located the main entrypoint where the code of your badge is launched from.
+# Feel free to modify this file or any of the files in the fri3d package.
+
+# In case you mess up, just delete this file using the REPL, and it will be restored to the original state.
+# Similarly, if you delete the fri3d or user package it will also get restored to its original state
+
+import logging
+import time
+
+from fri3d.badge.buttons import buttons
+from fri3d.badge.leds import leds
+from fri3d import boot
+from fri3d.rtttl import songs, RTTTL
+
+# If you want you can increase the log output level here
+logging.basicConfig(level=logging.INFO, force=True)
+
+# create a logger for use in this file
+logger = logging.Logger(__file__)
+
+# create a callback function that is executed when the menu button is pressed, it needs to have 1 argument
+def menu_button(_):
+    logger.warning("MENU button pressed, rebooting to main menu")
+    boot.main_menu()
+
+# assign the callback function to the menu button
+buttons.menu.cb = menu_button
+
+logger.info("From now on you can press the MENU button to reboot to the main menu")
+
+# stay in micropython, now that we have a button to go back to the main menu
+boot.persist()
+
+# play a song to recognise that we have booted micropython
+RTTTL(songs.macarena_s).play(volume=50)
+
+# a function to flash the leds
+def flash_leds():
+    logger.debug("Flashing LEDs")
+
+    # cycle
+    for i in range(4 * leds.n):
+        leds.fill((0, 0, 0))
+        leds[i % leds.n] = (255, 255, 255)
+        leds.write()
+        time.sleep_ms(25)
+
+    # bounce
+    for i in range(4 * leds.n):
+        leds.fill((0, 0, 128))
+        if (i // leds.n) % 2 == 0:
+            leds[i % leds.n] = (0, 0, 0)
+        else:
+            leds[leds.n - 1 - (i % leds.n)] = (0, 0, 0)
+        leds.write()
+        time.sleep_ms(60)
+
+    # fade in/out
+    for i in range(0, 4 * 256, 8):
+        for j in range(leds.n):
+            if (i // 256) % 2 == 0:
+                val = i & 0xff
+            else:
+                val = 255 - (i & 0xff)
+            leds[j] = (val, 0, 0)
+        leds.write()
+        time.sleep(0)
+
+    # clear
+    leds.fill((0, 0, 0))
+    leds.write()
+
+# call our function to flash the leds
+flash_leds()
 ```
 
 ## Badge Examples
