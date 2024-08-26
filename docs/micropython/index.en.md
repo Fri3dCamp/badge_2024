@@ -32,7 +32,7 @@ There are examples installed on the badge itself. [sources](https://github.com/F
 
 You can explore these with [ViperIDE](https://fri3dcamp.github.io/viper/)
 
-If some of the first 4 examples fail to run, this is likely because the first micropython boot was interrupted. The easiest way to fix this is to follow the steps above.
+If some of the first 4 examples fail to run, this is likely because the first micropython boot was interrupted. The easiest way to fix this is to follow the steps above [Start micropython](#start-micropython).
 
 ## How to run a local file
 Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
