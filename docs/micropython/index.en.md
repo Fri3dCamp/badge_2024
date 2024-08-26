@@ -59,6 +59,18 @@ Answer: Polo!
 >>> 
 ```
 
+## How to reboot to the main menu when pressing the MENU button
+```python
+from fri3d.badge.buttons import buttons
+from fri3d import boot
+
+def menu_button(_):
+    print("MENU button pressed")
+    boot.main_menu()
+
+buttons.menu.cb = menu_button
+```
+
 ## How to run a local file
 Install `mpremote` [howto](https://docs.micropython.org/en/latest/reference/mpremote.html)
 
