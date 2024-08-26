@@ -53,6 +53,25 @@ You need to perform a hard reset (reset button on the badge)
 mpremote resume fs cp local_path/file.jpg :file.jpg
 ```
 
+## Blink the badge leds 10 times red
+```python
+import time
+from fri3d.badge.leds import leds
+
+for _ in range(10):
+   for i in range(leds.n):
+      leds[i] = (255, 0, 0)
+   leds.write()
+
+   time.sleep(0.5)
+
+   for i in range(leds.n):
+      leds[i] = (0, 0, 0)
+   leds.write()
+
+   time.sleep(0.5)
+```
+
 ## Start the Fri3d application
 ```python
 from fri3d.application import Application
