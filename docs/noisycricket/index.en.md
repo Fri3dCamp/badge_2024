@@ -16,7 +16,8 @@
     2 resistors soldered
     ![resistors soldered](20240418_212359.jpg)
 
-4. NPN transistor 2N3904 with flat side to the left (back of noisy cricket)
+4. NPN transistor 2N3904 with flat side to the right (front of noisy cricket). **This is different from the silkscreen on the pcb.**  
+*transistor is wrongly soldered in these pictures*  
    ![transistor soldered](20240418_212550.jpg)
 
 5. Electrolytic capacitor (33 microFarad)  

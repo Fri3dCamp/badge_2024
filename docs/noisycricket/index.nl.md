@@ -15,7 +15,8 @@
     2 weerstanden gesoldeerd  
     ![resistors soldered](20240418_212359.jpg)
 
-4. NPN-transistor 2N3904 met platte kant naar links (achterkant van noisy cricket)  
+4. NPN-transistor 2N3904 met platte kant naar rechts (voorkant van noisy cricket). **Dit is andersom dan de silkscreen op de pcb.**  
+*transistor is verkeerd gsoldeerd op deze fotos*  
    ![transistor soldered](20240418_212550.jpg)
 
 5. Elektrolytische condensator (33 microFarad)  
