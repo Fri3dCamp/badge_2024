@@ -23,6 +23,7 @@
 5. Electrolytic capacitor (33 microFarad)  
    Mind the **polarity**: long leg is positive, short leg is negative, white marking on the body is negative  
    There are 2 holes for positive and 2 holes for negative, choose best fitting ones.
+   *transistor is wrongly soldered in these pictures* 
    ![capacitor soldered](20240418_212741.jpg)
 
 6. Pin header soldered on the bottom  
@@ -30,18 +31,22 @@
 
     - on the bottom: this results in an upright position when mounted on the fri3d2024 badge
     - at the back: this results in a front facing position when mounted on the fri3d2024 badge
+    *transistor is wrongly soldered in these pictures* 
     ![pin header soldered bottom](20240418_213031.jpg)
     ![pin header alternate orientation](pin_header_alternate_orientation.png)
 
 7. Ready to solder the LED  
    Mind the **polarity**: long leg is positive, short leg is negative, flat side on the body is negative
+   *transistor is wrongly soldered in these pictures* 
    ![ready to solder LED](20240418_213045.jpg)
 
 8. LED soldered  
    Mind the **polarity**: positive (long leg) on the bottom, negative on top (short leg, flat side on the body)
+   *transistor is wrongly soldered in these pictures* 
    ![LED soldered](20240418_213317.jpg)
 
 9. Overview pictures of soldered Noisy Cricket
+*transistor is wrongly soldered in these pictures* 
    ![soldered 1](20240418_213331.jpg)
    ![soldered 2](20240418_213347.jpg)
    ![soldered 3](20240418_213358.jpg)
@@ -52,9 +57,11 @@
 
 10. Noisy Cricket mounted on the fri3d2024 badge
     Mounted with the pin header soldered on the bottom
+    *transistor is wrongly soldered in these pictures* 
     ![mounted 1](20240418_213828.jpg)
     ![mounted 2](20240418_213843.jpg)
 
     Mounted with the pin header soldered on the back
+    *transistor is wrongly soldered in these pictures* 
     ![mounted 3](DSC_5355.JPG)
     ![mounted 4](DSC_5358.JPG)
