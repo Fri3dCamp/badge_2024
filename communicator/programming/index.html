@@ -1,0 +1,1287 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fri3dcamp.github.io/badge_2024/communicator/programming/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../esphome/">
+      
+      
+      <link rel="icon" href="../../assets/favicon-96x96.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>De LANA Module Programmeren - Fri3d 2024</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#de-lana-module-programmeren" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fri3d 2024" class="md-header__button md-logo" aria-label="Fri3d 2024" data-md-component="logo">
+      
+  <img src="../../assets/logo_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fri3d 2024
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              De LANA Module Programmeren
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecteer taal">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../en/communicator/programming/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="nl" class="md-select__link">
+              Nederlands
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Delen" aria-label="Delen" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fri3d 2024" class="md-nav__button md-logo" aria-label="Fri3d 2024" data-md-component="logo">
+      
+  <img src="../../assets/logo_white.svg" alt="logo">
+
+    </a>
+    Fri3d 2024
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fri3d Camp 2024 Badge en Addons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flashing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Retro--Go-Gaming/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Retro  Go Gaming
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Retro  Go Gaming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../arduino/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Arduino
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arduino/using_official_esp32_boards_manager_package/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino IDE gebruiken met het officiële esp32 bord pakket van Espressif
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blaster-2022/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blaster 2022
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Blaster 2022
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Communicator
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Communicator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    De LANA Module Programmeren
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../esphome/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Esphome
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Esphome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../flamingo/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Flamingo
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Flamingo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flamingo/programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    De LANA Module Programmeren
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../micropython/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Micropython
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Micropython
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../micropython/lvgl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LVGL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../noisycricket/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Noisycricket
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Noisycricket
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../onboarding/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Onboarding
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Onboarding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../onboarding/firstupdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Je eerste update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../platformio/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Platformio
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Platformio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../sweet4x4/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Sweet4x4
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Sweet4x4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="de-lana-module-programmeren">De LANA Module Programmeren</h1>
+<p>Om de <a href="https://phyx.be/LANA_TNY/">LANA</a> module op je <code>communicator</code> te programmeren, kun je zowel <a href="https://embeetle.com/">Embeetle IDE</a> als <a href="http://www.mounriver.com/">Mounriver Studio</a> gebruiken.</p>
+<p>&nbsp;<br></p>
+<h1 id="embeetle-ide">Embeetle IDE</h1>
+<p>Embeetle is een IDE van Belgische makelij. De LANA kan worden geprogrammeerd via USB-C-aansluiting, maar ook met de <a href="https://www.wch-ic.com/products/WCH-Link.html">WCH-Link debugger</a>, wat extra debug-mogelijkheden biedt. <a href="https://embeetle.com/#supported-hardware/wch/boards/lana-tny-01">Klik hier</a> voor de volledige documentatie over hoe je de LANA module in Embeetle kunt programmeren. De onderstaande stappen zijn een quick start guide om je LANA module via de USB-C-poort te programmeren.</p>
+<p>&nbsp;<br></p>
+<h2 id="stap-1-download-embeetle-ide">STAP 1: Download Embeetle IDE</h2>
+<p>Download eerst Embeetle:
+ - <a href="https://embeetle.com/#embeetle-ide/download">https://embeetle.com/downloads</a></p>
+<p>Je kunt het downloaden voor zowel <strong>Windows</strong> als <strong>Linux</strong>. We hebben nog geen ondersteuning voor MAC.</p>
+<p><img src="https://github.com/user-attachments/assets/59498d20-e134-4101-98d4-90c1bf618ca1" width="400"></p>
+<p>&nbsp;<br></p>
+<h2 id="stap-2-start-het-lana-tny-01-communicator-2024-project">STAP 2: Start het <code>lana-tny-01-communicator-2024</code> project</h2>
+<p>Start Embeetle en klik op 'CREATE PROJECT':</p>
+<p><img src="https://github.com/user-attachments/assets/8d881776-0d6e-4dac-a253-c3d7d610ed76" width="600"></p>
+<p>&nbsp;<br>
+Selecteer vervolgens <code>WCH</code> als chip fabrikant en zoek naar het project <code>lana-tny-01-communicator-2024</code>:</p>
+<p><img src="https://github.com/user-attachments/assets/9351d454-d978-404a-a586-55c1118d5d01" width="600"></p>
+<p>&nbsp;<br>
+Klik onderaan op <code>CREATE</code>. Embeetle IDE zal het project en ook alle benodigde tools automatisch downloaden. Dan opent het project:</p>
+<p><img alt="image" src="https://github.com/user-attachments/assets/caac076a-4451-4286-8899-637ecab647cd" /></p>
+<p>&nbsp;<br></p>
+<h2 id="stap-3-plug-het-bordje-in">STAP 3: Plug het bordje in</h2>
+<p>Belangrijk: je badge mag niet aangesloten zijn aan de communicator (5V van de USB maakt je 3,3V badge stuk)<br />
+DRUK EERST op de <code>BOOT</code>-knop en SLUIT DAN je bordje aan op de computer met een USB-C-kabel (terwijl je de <code>BOOT</code>-knop ingedrukt houdt):</p>
+<p><img src="https://github.com/user-attachments/assets/da84c6b6-a243-4aa3-ab76-96eced937d2a" width="200"></p>
+<p>Wanneer het bordje is aangesloten, kun je de <code>BOOT</code>-knop loslaten. Deze procedure zorgt ervoor dat je bordje in "bootloader-modus" komt. Dit betekent dat de microcontroller klaar is om nieuwe firmware te ontvangen!</p>
+<p>&nbsp;<br></p>
+<h2 id="stap-4-flash-de-firmware">STAP 4: Flash de firmware</h2>
+<p>Klik nu op de <code>flash</code>-knop bovenaan in Embeetle IDE. Embeetle zal proberen de firmware naar de LANA module te flashen. Echter, je kunt nu de volgende foutmelding krijgen:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Failed to open USB device: Bus 001 Device 008: ID 4348:55e0
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Error: Failed to open USB device on Windows
+</span></code></pre></div>
+Op Linux kun je een ander probleem tegenkomen:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Failed to open USB device: Bus 003 Device 010: ID 4348:55e0
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Error: Failed to open USB device on Linux due to no enough permission
+</span></code></pre></div>
+Hieronder is de oplossing.</p>
+<p>&nbsp;<br></p>
+<h2 id="stap-5a-installeer-zadig-alleen-windows">STAP 5a: Installeer Zadig (alleen Windows)</h2>
+<p>Je moet <a href="https://zadig.akeo.ie/">Zadig</a> installeren en de driver voor het USB-apparaat vervangen door de WinUSB-driver. Download eerst <a href="https://zadig.akeo.ie/">Zadig</a>: </p>
+<p><img src="https://github.com/user-attachments/assets/d537fe6a-de71-48dd-9269-857ddcadfe81" width="600"></p>
+<p>&nbsp;<br>
+Open vervolgens Zadig en selecteer <strong>Options</strong> -&gt; <strong>List All Devices</strong>:</p>
+<p><img src="https://github.com/user-attachments/assets/7000ec9f-a97e-4c05-a57d-42b7e0265a69" width="600"></p>
+<p>&nbsp;<br>
+Selecteer <strong>USB Module</strong> uit de list of devices en kies <strong>WinUSB</strong> als driver. Klik vervolgens op <strong>Replace Driver</strong>:</p>
+<p><img src="https://github.com/user-attachments/assets/c5cb00ea-d307-4fd1-a668-03270ae98f34" width="600"></p>
+<p>&nbsp;<br>
+Wacht tot de driver-installatie is voltooid:</p>
+<p><img src="https://github.com/user-attachments/assets/b55a5996-c4af-4f2c-ac66-8b4f59a05aed" width="600"></p>
+<p>&nbsp;<br>
+Succes:</p>
+<p><img src="https://github.com/user-attachments/assets/4afdf22e-804a-4845-92a7-93bcdd6be906" width="600"></p>
+<p>&nbsp;<br>
+Probeer het opnieuw in Embeetle IDE. Het zou nu moeten werken:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&quot;C:/Users/krist/EMBEETLE IDE/embeetle/beetle_tools/windows/wchisp_0.2.2_64b/wchisp.exe&quot; flash application.elf
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>14:57:06 [INFO] Chip: CH32V203G6U6[0x3619] (Code Flash: 32KiB)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>14:57:06 [INFO] Chip UID: CD-AB-19-97-D0-BC-B6-FF
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>14:57:06 [INFO] BTVER(bootloader ver): 02.70
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>14:57:06 [INFO] Code Flash protected: false
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>14:57:06 [INFO] Current config registers: a55aff0000ff00ffffffffff00020700cdab1997d0bcb6ff
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>RDPR_USER: 0x00FF5AA5
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  [7:0]   RDPR 0xA5 (0b10100101)
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    `- Unprotected
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  [16:16] IWDG_SW 0x1 (0b1)
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    `- IWDG enabled by the software, and disabled by hardware
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  [17:17] STOP_RST 0x1 (0b1)
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    `- Disable
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  [18:18] STANDBY_RST 0x1 (0b1)
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    `- Disable, entering standby-mode without RST
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>  [23:22] SRAM_CODE_MODE 0x3 (0b11)
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    `- CODE-228KB + RAM-32KB / CODE-160KB + RAM-32KB depending on the chip
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>DATA: 0xFF00FF00
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  [7:0]   DATA0 0x0 (0b0)
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>  [23:16] DATA1 0x0 (0b0)
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>WRP: 0xFFFFFFFF
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  `- Unprotected
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>14:57:06 [INFO] Read application.elf as ELF format
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>14:57:06 [INFO] Found loadable segment, physical address: 0x00000000, virtual address: 0x00000000, flags: 0x5
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>14:57:06 [INFO] Section names: [&quot;.init&quot;, &quot;.vector&quot;, &quot;.text&quot;]
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>14:57:06 [INFO] Found loadable segment, physical address: 0x00000dbc, virtual address: 0x20000000, flags: 0x6
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>14:57:06 [INFO] Section names: [&quot;.data&quot;]
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>14:57:06 [INFO] Firmware size: 4096
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>14:57:06 [INFO] Erasing...
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>14:57:06 [WARN] erase_code: set min number of erased sectors to 8
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>14:57:06 [INFO] Erased 8 code flash sectors
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>14:57:07 [INFO] Erase done
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>14:57:07 [INFO] Writing to code flash...
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>██████████████████████████████████████ 4096/409614:57:07 [INFO] Code flash 4096 bytes written
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>14:57:08 [INFO] Verifying...
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>██████████████████████████████████████ 4096/409614:57:08 [INFO] Verify OK
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>14:57:08 [INFO] Now reset device and skip any communication errors
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>14:57:08 [INFO] Device reset
+</span></code></pre></div>
+<p>Als het niet werkte, trek dan de LANA-module eruit en sluit hem opnieuw aan op je computer terwijl je de <code>BOOT</code>-knop ingedrukt houdt (laat de knop een paar seconden na het aansluiten op de computer los), om ervoor te zorgen dat het echt in "bootloader-modus" is. Als het nog steeds niet werkt, aarzel dan niet om contact met ons op te nemen:
+ - E-mail: kristof@embeetle.com
+ - Whatsapp: +32(0) 496 90 75 44
+ - Discord: @kristof-at-embeetle</p>
+<p>&nbsp;<br></p>
+<h2 id="stap-5b-voeg-apparaat-toe-aan-plugdev-groep-alleen-linux">STAP 5b: Voeg apparaat toe aan plugdev groep (alleen Linux)</h2>
+<p>Op Linux moet je het apparaat toevoegen aan de <strong>plugdev</strong> groep. Controleer eerst de groepen die gekoppeld zijn aan de huidige gebruiker:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ groups whoami
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>kristof : kristof adm cdrom sudo dip plugdev lpadmin lxd sambashare
+</span></code></pre></div>
+Als <code>plugdev</code> niet is vermeld, voeg dan de huidige gebruiker toe aan die groep: 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ sudo useradd -G plugdev whoami
+</span></code></pre></div>
+Bepaal de Vendor ID en Product ID van je apparaat met het <code>$ lsusb</code> commando: 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ lsusb
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Bus 003 Device 002: ID 046d:c548 Logitech, Inc. Logi Bolt Receiver
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Bus 003 Device 003: ID 1a40:0101 Terminus Technology Inc. Hub
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Bus 003 Device 004: ID 04f2:b75c Chicony Electronics Co., Ltd FHD Webcam
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Bus 003 Device 005: ID 1a2c:4324 China Resource Semico Co., Ltd USB Keyboard
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>Bus 003 Device 006: ID 048d:6005 Integrated Technology Express, Inc. ITE Device(8291)
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Bus 003 Device 007: ID 1bcf:2701 Sunplus Innovation Technology Inc. HD 720P webcam
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>Bus 003 Device 008: ID 048d:ce00 Integrated Technology Express, Inc. ITE Device(8291)
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>Bus 003 Device 009: ID 8087:0026 Intel Corp. AX201 Bluetooth
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>Bus 003 Device 011: ID 4348:55e0 WinChipHead
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>Bus 004 Device 002: ID 0bda:0316 Realtek Semiconductor Corp. Card Reader
+</span></code></pre></div>
+Zoek naar de lijn met <code>WinChipHead</code> (derde van onder). Zoals je kunt zien, bestaat de ID voor mijn apparaat uit twee 4-cijferige hex-getallen: <code>ID 4348:55e0</code>. De eerste is de Vendor ID, de tweede de Product ID. Verwissel ze niet!</p>
+<p>Navigeer in de console naar <code>/etc/udev/rules.d</code> en lijst de inhoud van de directory:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ cd /etc/udev/rules.d
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$ ls
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>70-snap.core.rules
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>70-snap.firefox.rules
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>70-snap.snap-store.rules
+</span></code></pre></div>
+Maak een nieuw bestand aan, bijvoorbeeld met de gedit-editor: 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ sudo gedit 10-probe.rules
+</span></code></pre></div>
+Je kunt dit bestand een willekeurige naam geven, zolang het maar eindigt op <code>.rules</code>. Rules files beginnen bij conventie met een nummer. Linux behandelt rules files in lexicale volgorde, en het nummer maakt het gemakkelijk te zien welke bestanden eerst worden gelezen. Het kiezen van een laag nummer (zoals 10, hierboven) betekent dat je bestand wordt gelezen vóór de system rules files.</p>
+<p>Nu moet je een lijn aan het bestand toevoegen die je apparaat vertegenwoordigt. Als het bestand al bestond (van een eerder toegevoegd apparaat op deze manier), kun je alle inhoud laten zoals die is en gewoon een lijn onderaan toevoegen. De lijn die je moet toevoegen is:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ATTRS{idVendor}==&quot;4348&quot;, ATTRS{idProduct}==&quot;55e0&quot;, MODE=&quot;666&quot;, GROUP=&quot;plugdev&quot;
+</span></code></pre></div>
+<small>Opmerking: In oudere Ubuntu/Linux-installaties moet je 'ATTRS' mogelijk vervangen door 'SYSFS'.</small></p>
+<p>Vul natuurlijk je eigen Vendor ID en Product ID in! (hoewel de bovenstaande correct zouden moeten zijn voor het <code>LANA-TNY-01</code> bordje).
+Sla het bestand op en sluit het. Nu moet je Linux opdracht geven om de udev-regels opnieuw te laden:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ sudo udevadm trigger
+</span></code></pre></div>
+Elk lid van de <strong>plugdev</strong> groep zou nu <code>wchisp</code> moeten kunnen uitvoeren zonder gebruik van <code>sudo</code>.</p>
+<p>Probeer opnieuw te flashen in Embeetle IDE.
+Als het niet werkt, trek dan de LANA-module eruit en sluit hem opnieuw aan op je computer terwijl je de <code>BOOT</code>-knop ingedrukt houdt (laat de knop een paar seconden na het aansluiten op de computer los), om ervoor te zorgen dat het echt in "bootloader-modus" is. Als het nog steeds niet werkt, aarzel dan niet om contact met ons op te nemen:
+ - E-mail: kristof@embeetle.com
+ - Whatsapp: +32(0) 496 90 75 44
+ - Discord: @kristof-at-embeetle</p>
+<p>&nbsp;<br></p>
+<h1 id="mounriver-studio">Mounriver Studio</h1>
+<p><a href="http://www.mounriver.com/">Mounriver</a> is een IDE gebaseerd op eclipse, uitgebracht door de chipmaker WCH. Dit werkt op Windows en er is een versie voor Linux en mogelijk ook voor Mac, maar de laatste twee lopen een beetje achter. <a href="http://www.mounriver.com/">Mounriver</a> geeft ook vaak foutieve virusmeldingen op veel systemen en schendt de GPL-licentievoorwaarden van de GCC Compiler.</p>
+<p>&nbsp;<br></p>
+<h1 id="opmerkingen-over-de-lana-module">Opmerkingen over de LANA-module</h1>
+<p>Als je zelf aan de slag gaat met de LANA TNY, moet je op één ding letten (ongeacht de IDE): LANA heeft geen externe klok en moet de interne klok (HSI) gebruiken, dit wordt ook vermeld in de standaard sketch van <a href="https://embeetle.com/">Embeetle</a>.
+Als je per ongeluk je <a href="https://phyx.be/LANA_TNY/">LANA</a> board "brickt", kun je deze meestal debricken via USB of door gebruik te maken van de power reset-functie van de <a href="https://www.wch-ic.com/downloads/WCHISPTool_Setup_exe.html">WCHISPTool</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.indexes", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
